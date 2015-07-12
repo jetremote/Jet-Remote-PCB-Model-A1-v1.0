@@ -1,0 +1,454 @@
+EESchema Schematic File Version 2
+LIBS:Receptor-JetRemote-rescue
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:74xgxx
+LIBS:ac-dc
+LIBS:actel
+LIBS:brooktre
+LIBS:cmos_ieee
+LIBS:dc-dc
+LIBS:elec-unifil
+LIBS:ftdi
+LIBS:gennum
+LIBS:graphic
+LIBS:hc11
+LIBS:ir
+LIBS:logo
+LIBS:microchip_pic10mcu
+LIBS:microchip_pic12mcu
+LIBS:microchip_pic16mcu
+LIBS:microchip_pic18mcu
+LIBS:microchip_pic32mcu
+LIBS:motor_drivers
+LIBS:msp430
+LIBS:nordicsemi
+LIBS:nxp_armmcu
+LIBS:onsemi
+LIBS:powerint
+LIBS:pspice
+LIBS:references
+LIBS:relays
+LIBS:rfcom
+LIBS:silabs
+LIBS:stm8
+LIBS:stm32
+LIBS:supertex
+LIBS:switches
+LIBS:transf
+LIBS:ttl_ieee
+LIBS:video
+LIBS:w_analog
+LIBS:w_connectors
+LIBS:w_device
+LIBS:w_logic
+LIBS:w_relay
+LIBS:w_rtx
+LIBS:w_transistor
+LIBS:Altera
+LIBS:analog_devices
+LIBS:ESD_Protection
+LIBS:Lattice
+LIBS:maxim
+LIBS:microchip_dspic33dsc
+LIBS:Oscillators
+LIBS:Power_Management
+LIBS:w_memory
+LIBS:w_microcontrollers
+LIBS:w_opto
+LIBS:w_vacuum
+LIBS:Xicor
+LIBS:Zilog
+LIBS:common
+LIBS:lm1117
+LIBS:Receptor-JetRemote-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "Receptor Jet Remote - Modelo A1"
+Date "jue 04 jun 2015"
+Rev "1.0"
+Comp "Jet Remote"
+Comment1 "Author: Javier Hernández <jetremote.canarias@gmail.com>"
+Comment2 "GPL v3"
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L PWR_FLAG #FLG01
+U 1 1 5569E018
+P 1050 1350
+F 0 "#FLG01" H 1050 1620 30  0001 C CNN
+F 1 "PWR_FLAG" H 1050 1580 30  0000 C CNN
+F 2 "" H 1050 1350 60  0000 C CNN
+F 3 "" H 1050 1350 60  0000 C CNN
+	1    1050 1350
+	1    0    0    -1  
+$EndComp
+$Comp
+L PWR_FLAG #FLG02
+U 1 1 5569E03D
+P 1150 4400
+F 0 "#FLG02" H 1150 4670 30  0001 C CNN
+F 1 "PWR_FLAG" H 1150 4630 30  0000 C CNN
+F 2 "" H 1150 4400 60  0000 C CNN
+F 3 "" H 1150 4400 60  0000 C CNN
+	1    1150 4400
+	-1   0    0    1   
+$EndComp
+$Comp
+L +12V #PWR03
+U 1 1 5569E1A1
+P 1350 1350
+F 0 "#PWR03" H 1350 1300 20  0001 C CNN
+F 1 "+12V" H 1350 1450 30  0000 C CNN
+F 2 "" H 1350 1350 60  0000 C CNN
+F 3 "" H 1350 1350 60  0000 C CNN
+	1    1350 1350
+	1    0    0    -1  
+$EndComp
+$Comp
+L FUSE F1
+U 1 1 556A0082
+P 2450 1350
+F 0 "F1" H 2550 1400 50  0000 C CNN
+F 1 "FUSE" H 2350 1300 50  0000 C CNN
+F 2 "" H 2450 1350 60  0000 C CNN
+F 3 "" H 2450 1350 60  0000 C CNN
+	1    2450 1350
+	1    0    0    -1  
+$EndComp
+$Comp
+L SCHOTTKY D1
+U 1 1 556A0A9C
+P 3000 1350
+F 0 "D1" H 3000 1450 40  0000 C CNN
+F 1 "SCHOTTKY_45V_8A" H 3000 1250 40  0000 C CNN
+F 2 "" H 3000 1350 60  0000 C CNN
+F 3 "" H 3000 1350 60  0000 C CNN
+	1    3000 1350
+	1    0    0    -1  
+$EndComp
+$Comp
+L INDUCTOR L1
+U 1 1 556A0CAB
+P 3900 1350
+F 0 "L1" V 3850 1350 50  0000 C CNN
+F 1 "INDUCTOR" V 4000 1350 50  0000 C CNN
+F 2 "" H 3900 1350 60  0000 C CNN
+F 3 "" H 3900 1350 60  0000 C CNN
+	1    3900 1350
+	0    1    1    0   
+$EndComp
+$Comp
+L CP Cin1
+U 1 1 556A16D8
+P 4300 2950
+F 0 "Cin1" H 4325 3050 50  0000 L CNN
+F 1 "100u" H 4325 2850 50  0000 L CNN
+F 2 "" H 4338 2800 30  0000 C CNN
+F 3 "" H 4300 2950 60  0000 C CNN
+	1    4300 2950
+	1    0    0    -1  
+$EndComp
+$Comp
+L BC546 Q1
+U 1 1 556A2B08
+P 7500 3950
+F 0 "Q1" H 7700 4025 50  0000 L CNN
+F 1 "2N3904" H 7700 3950 50  0000 L CNN
+F 2 "TO-92" H 7700 3875 50  0000 L CIN
+F 3 "" H 7500 3950 50  0000 L CNN
+	1    7500 3950
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R3
+U 1 1 556A5408
+P 6500 3950
+F 0 "R3" V 6580 3950 50  0000 C CNN
+F 1 "R" V 6500 3950 50  0000 C CNN
+F 2 "" V 6430 3950 30  0000 C CNN
+F 3 "" H 6500 3950 30  0000 C CNN
+	1    6500 3950
+	0    1    1    0   
+$EndComp
+$Comp
+L SCHOTTKY D2
+U 1 1 556A57F9
+P 5750 3250
+F 0 "D2" H 5750 3150 40  0000 C CNN
+F 1 "50V_3A" H 5750 3350 40  0000 C CNN
+F 2 "" H 5750 3250 60  0000 C CNN
+F 3 "" H 5750 3250 60  0000 C CNN
+	1    5750 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_3 K1
+U 1 1 556A596B
+P 6350 3350
+F 0 "K1" V 6300 3350 50  0000 C CNN
+F 1 "xbee" V 6400 3350 40  0000 C CNN
+F 2 "" H 6350 3350 60  0000 C CNN
+F 3 "" H 6350 3350 60  0000 C CNN
+	1    6350 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_01X03 P2
+U 1 1 556A5A7B
+P 9300 2500
+F 0 "P2" H 9300 2700 50  0000 C CNN
+F 1 "PARADA" V 9400 2500 50  0000 C CNN
+F 2 "" H 9300 2500 60  0000 C CNN
+F 3 "" H 9300 2500 60  0000 C CNN
+	1    9300 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_01X02 P1
+U 1 1 556A5BCC
+P 1550 2800
+F 0 "P1" H 1550 2950 50  0000 C CNN
+F 1 "CONN_01X02" V 1650 2800 50  0000 C CNN
+F 2 "" H 1550 2800 60  0000 C CNN
+F 3 "" H 1550 2800 60  0000 C CNN
+	1    1550 2800
+	-1   0    0    1   
+$EndComp
+$Comp
+L GND-RESCUE-Receptor-JetRemote #PWR04
+U 1 1 556A6B05
+P 1400 4500
+F 0 "#PWR04" H 1400 4500 30  0001 C CNN
+F 1 "GND" H 1400 4430 30  0001 C CNN
+F 2 "" H 1400 4500 60  0000 C CNN
+F 3 "" H 1400 4500 60  0000 C CNN
+	1    1400 4500
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R1
+U 1 1 556A7E1F
+P 5150 2800
+F 0 "R1" V 5230 2800 50  0000 C CNN
+F 1 "220Ω" V 5150 2800 50  0000 C CNN
+F 2 "" V 5080 2800 30  0000 C CNN
+F 3 "" H 5150 2800 30  0000 C CNN
+	1    5150 2800
+	-1   0    0    1   
+$EndComp
+$Comp
+L R R2
+U 1 1 556A7EA1
+P 5150 3750
+F 0 "R2" V 5230 3750 50  0000 C CNN
+F 1 "360Ω" V 5150 3750 50  0000 C CNN
+F 2 "" V 5080 3750 30  0000 C CNN
+F 3 "" H 5150 3750 30  0000 C CNN
+	1    5150 3750
+	-1   0    0    1   
+$EndComp
+$Comp
+L DIODE D3
+U 1 1 556B0890
+P 6900 2450
+F 0 "D3" H 6900 2600 50  0000 C CNN
+F 1 "1N4007" H 6900 2275 50  0000 C CNN
+F 2 "" H 6900 2450 60  0000 C CNN
+F 3 "" H 6900 2450 60  0000 C CNN
+	1    6900 2450
+	0    1    1    0   
+$EndComp
+$Comp
+L CP Cout1
+U 1 1 556B0A22
+P 5700 3850
+F 0 "Cout1" H 5725 3950 50  0000 L CNN
+F 1 "100u" H 5725 3750 50  0000 L CNN
+F 2 "" H 5738 3700 30  0000 C CNN
+F 3 "" H 5700 3850 60  0000 C CNN
+	1    5700 3850
+	1    0    0    -1  
+$EndComp
+$Comp
+L RELAY_RT1 RLY1
+U 1 1 556B8CB2
+P 7750 2450
+F 0 "RLY1" H 7750 2700 60  0000 C CNN
+F 1 "RELE" H 7750 2215 60  0000 C CNN
+F 2 "Relay_JetRemote_G5LE-1:relay_PE" H 7750 2450 60  0000 C CNN
+F 3 "" H 7750 2450 60  0000 C CNN
+	1    7750 2450
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	1150 4400 8750 4400
+Wire Wire Line
+	1750 1350 1750 2750
+Wire Wire Line
+	1750 2850 1750 4400
+Connection ~ 1750 4400
+Wire Wire Line
+	1050 1350 2200 1350
+Connection ~ 1350 1350
+Connection ~ 1750 1350
+Wire Wire Line
+	2700 1350 2950 1350
+Wire Wire Line
+	3100 1350 3600 1350
+Wire Wire Line
+	4300 1350 4300 2800
+Connection ~ 4300 1350
+Wire Wire Line
+	4300 3100 4300 4400
+Connection ~ 4300 4400
+Wire Wire Line
+	1400 4500 1400 4400
+Connection ~ 1400 4400
+Wire Wire Line
+	5150 3900 5150 4400
+Connection ~ 5150 4400
+Wire Wire Line
+	5150 2950 5150 3600
+Wire Wire Line
+	6000 3450 6000 3950
+Wire Wire Line
+	6650 3950 7300 3950
+Wire Wire Line
+	7600 4400 7600 4150
+Wire Wire Line
+	6000 3950 6350 3950
+Wire Wire Line
+	4200 1350 7600 1350
+Connection ~ 7600 4400
+Wire Wire Line
+	7600 2650 7600 3750
+Wire Wire Line
+	7600 2650 6900 2650
+Wire Wire Line
+	6900 2250 7600 2250
+Wire Wire Line
+	7600 2250 7600 1350
+Connection ~ 7600 1350
+Wire Wire Line
+	7850 2650 7850 2850
+Wire Wire Line
+	7850 2850 8600 2850
+Wire Wire Line
+	8600 2850 8600 2500
+Wire Wire Line
+	8600 2500 9100 2500
+Wire Wire Line
+	7800 2250 7800 2050
+Wire Wire Line
+	7800 2050 9550 2050
+Wire Wire Line
+	9550 2050 9550 2850
+Wire Wire Line
+	9550 2850 9100 2850
+Wire Wire Line
+	9100 2850 9100 2600
+Wire Wire Line
+	7900 2250 7900 2150
+Wire Wire Line
+	7900 2150 9100 2150
+Wire Wire Line
+	9100 2150 9100 2400
+$Comp
+L LM317T U1
+U 1 1 556BB0AD
+P 5100 2100
+F 0 "U1" H 4900 2300 40  0000 C CNN
+F 1 "LM317T" H 5100 2300 40  0000 L CNN
+F 2 "TO-220" H 5100 2200 30  0000 C CIN
+F 3 "" H 5100 2100 60  0000 C CNN
+	1    5100 2100
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5150 2650 5150 2500
+Wire Wire Line
+	4800 3250 4800 2100
+Wire Wire Line
+	4800 2100 4850 2100
+Wire Wire Line
+	5150 1700 5150 1350
+Connection ~ 5150 1350
+Wire Wire Line
+	4800 3250 5150 3250
+Connection ~ 5150 3250
+Wire Wire Line
+	5150 2600 5600 2600
+Connection ~ 5150 2600
+$Comp
+L CP Cbypass1
+U 1 1 556B357A
+P 5350 3700
+F 0 "Cbypass1" V 5400 3200 50  0000 L CNN
+F 1 "10u" H 5375 3600 50  0000 L CNN
+F 2 "" H 5388 3550 30  0000 C CNN
+F 3 "" H 5350 3700 60  0000 C CNN
+	1    5350 3700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6000 3350 5950 3350
+Wire Wire Line
+	5950 3350 5950 4400
+Connection ~ 5950 4400
+Wire Wire Line
+	6000 3250 5850 3250
+Wire Wire Line
+	5600 3250 5700 3250
+Wire Wire Line
+	5600 2600 5600 3450
+Wire Wire Line
+	5700 3700 5700 3450
+Wire Wire Line
+	5700 3450 5600 3450
+Connection ~ 5600 3250
+Wire Wire Line
+	5700 4000 5700 4400
+Connection ~ 5700 4400
+Wire Wire Line
+	5350 3850 5350 4400
+Connection ~ 5350 4400
+Wire Wire Line
+	5350 3550 5350 3350
+Wire Wire Line
+	5350 3350 5150 3350
+Connection ~ 5150 3350
+Text Label 8200 4500 0    60   ~ 0
+TobeContinued
+$EndSCHEMATC
